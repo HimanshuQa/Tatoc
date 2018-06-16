@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  * @author HIM
  */
-public class AddCookie {
+public class Fifth_cookie{
     
     public static void main(String[] args) throws InterruptedException {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\HIM\\Desktop\\chromedriver_win32\\chromedriver.exe");

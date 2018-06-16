@@ -28,23 +28,22 @@ public class Fourth_popup {
     web.get("http://10.0.1.86/tatoc/basic/windows#");
     String parentWindowHandler = web.getWindowHandle(); // Store your parent window
 
-    web.findElement(By.cssSelector("a")).click();
+    web.findElement(By.cssSelector("a")).click(); //click on popup window
     String subWindowHandler = null;
 
     Set<String> handles = web.getWindowHandles(); // get all window handles
     System.out.println(handles);
-    Iterator<String> iterator = handles.iterator();
+    
+    Iterator<String> iterator = handles.iterator(); //creating iterator to get popup window
     while (iterator.hasNext()){
     subWindowHandler = iterator.next();
     }
     web.switchTo().window(subWindowHandler); // switch to popup window
-    web.findElement(By.id("name")).sendKeys("qainfoeh");
-    web.findElement(By.id("submit")).click();
-
-// Now you are in the popup window, perform necessary actions here
+    web.findElement(By.id("name")).sendKeys("qainfoeh");// writing in area
+    web.findElement(By.id("submit")).click();// clicking on submit
 
     web.switchTo().window(parentWindowHandler);  // switch back to parent window
-    web.findElements(By.cssSelector("a")).get(1).click();
+    web.findElements(By.cssSelector("a")).get(1).click(); //click on proceed
     
   
     }
