@@ -25,9 +25,9 @@ public class Third_drag {
     Actions actions = new Actions(web);
 
     web.get("http://10.0.1.86/tatoc/basic/drag");
-    WebElement element = web.findElement(By.id("dropbox")); // get dropbox
+    WebElement drop = web.findElement(By.id("dropbox")); // get dropbox
     WebElement drag = web.findElement(By.id("dragbox")); // get dragbox
-    actions.dragAndDrop(drag, element); //drag and drop in box
+    actions.dragAndDrop(drag, drop); //drag and drop in box
     actions.build().perform();
     web.findElement(By.cssSelector("a")).click();
     
