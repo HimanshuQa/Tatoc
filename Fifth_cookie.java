@@ -26,15 +26,16 @@ public class Fifth_cookie{
     
     
     int n=1;
-    while(n>0){
+    while(n>0)
+    {
         try {
             web.findElement(By.cssSelector("a")).click(); //click on generate token
             String value = web.findElement(By.id("token")).getText().split("Token: ")[1];    // get tokenn value
             n=0; // break the loop
-        } catch (Exception e) {
+         } catch (Exception e) {
             System.out.println(e);
             web.navigate().refresh(); //refresh page if generate token doesnot give result
-        }
+         }
     }
     
     String value = web.findElement(By.id("token")).getText().split("Token: ")[1]; // get tokenn value
